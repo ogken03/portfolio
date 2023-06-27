@@ -49,7 +49,7 @@ section{
 }
 
 .header.sticky {
-    border-bottom: .1rem solid var(--bg-color) ;
+    border-bottom: .1rem solid rgba(0,0,0,.2);
 }
 
 
@@ -84,9 +84,29 @@ section{
     align-items: center;
 }
 
-.home-img img{
-    width: 35vw;
+.home .btn {
+    margin-bottom: 2rem;
 }
+
+.home-img img {
+    width: 35vw;
+    animation:floatImage 4s ease-in-out infinite;
+}
+
+@keyframes floatImage{
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-2.4rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
 .home-content h3{
     font-size: 3.2rem;
     font-weight: 700;
@@ -240,9 +260,11 @@ span{
     background: var(--second-bg-color);
 }
 
+
 .portfolio h2 {
     margin-bottom: 4rem;
 }
+
 
 .portfolio-container{
     display: grid;
@@ -257,10 +279,14 @@ span{
     box-shadow: 0 0 1rem var(--bg-color);
     overflow: hidden;
     display: flex;
+    flex: 1 1 30rem;
 }
 
+
+
 .portfolio img {
-    width: 30vw;
+    width: 20vw;
+    flex: 1 1 20rem;
 }
 
 portfolio-box img
@@ -276,7 +302,7 @@ portfolio-box img
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(0,0,0,.1), var(--main-color));
+    background: linear-gradient(var(--main-color), rgba(0,0,0,.1));
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -284,6 +310,7 @@ portfolio-box img
     padding:0 4rem;
     transform: translateY(100%);
     transition: .5s ease;
+    
 }
 
 .portfolio-box:hover .portfolio-layer
@@ -358,6 +385,7 @@ portfolio-box:hover img{
 .contact form .input-box input{
     width: 49%;
 
+
 }
 
 .contact form textarea {
@@ -394,6 +422,10 @@ portfolio-box:hover img{
         min-height: auto;
     }
 
+    .portfolio {
+        padding-bottom: 7rem;
+    }
+
     .footer{
         padding: 2rem 3%;
     }
@@ -414,10 +446,12 @@ portfolio-box:hover img{
         background: var(--bg-color);
         border-top: .1rem solid rgba(0,0,0,.2);
         box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
-        display: none;
+        display:none;
     }
 
-
+    .navbar.active {
+        display:block;
+    }
 
     .navbar a {
         display:block;
@@ -427,6 +461,10 @@ portfolio-box:hover img{
 
     .home {
         flex-direction: column;
+    }
+
+    .home .btn {
+        margin-bottom: 5rem;
     }
 
     .home-content h3 {
@@ -459,7 +497,7 @@ portfolio-box:hover img{
     }
 
     .portfolio-container {
-        grid-template-columns: repeat(2,1);
+        grid-template-columns: 1fr;
     }
 }
 

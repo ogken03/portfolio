@@ -1,13 +1,17 @@
-let sections = document.querySelectorAll('section');
-let navLinks = document.querySelectorAll('header nav a');
-
 let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
 
 menuIcon.onclick = () => {
     menuIcon.classList.toggle('bx-x');
-    navbar.classList.togget('active');
+    navbar.classList.toggle('active');
 }
+
+
+
+let sections = document.querySelectorAll('section');
+let navLinks = document.querySelectorAll('header nav a');
+
+
 
 window.onscroll = () => {
     sections.forEach(sec => {
@@ -20,7 +24,7 @@ window.onscroll = () => {
 
             navLinks.forEach(links => {
                 links.classList.remove('active');
-                document.querySelector('header nav a [href*=' + id + ']').classList.add('active');
+                document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
             });
 
         };
@@ -42,3 +46,12 @@ window.onscroll = () => {
 ScrollReveal({reset:true, distance:'80px',duration: 2000, delay: 200});
 
 ScrollReveal().reveal('.home-content, .heading', {origin:'top'});
+
+
+
+const typed = new Typed('.multiple-text', {
+
+    strings: ['Arizona State University Student in Computer Science'],
+    
+   
+});
