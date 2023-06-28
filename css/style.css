@@ -90,22 +90,9 @@ section{
 
 .home-img img {
     width: 35vw;
-    animation:floatImage 4s ease-in-out infinite;
 }
 
-@keyframes floatImage{
-    0% {
-        transform: translateY(0);
-    }
 
-    50% {
-        transform: translateY(-2.4rem);
-    }
-
-    100% {
-        transform: translateY(0);
-    }
-}
 
 .home-content h3{
     font-size: 3.2rem;
@@ -436,7 +423,9 @@ portfolio-box:hover img{
         display: block;
     }
 
-
+    .about-img .heading {
+        text-align: center;
+    }
     .navbar {
         position: absolute;
         top: 100%;
@@ -467,12 +456,37 @@ portfolio-box:hover img{
         margin-bottom: 5rem;
     }
 
+    .center-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+    .home-content .btn {
+        text-align: center;
+    }
+
+    .services .heading {
+        text-align: center;
+    }
+    
+
     .home-content h3 {
         font-size: 2.6rem;
+        text-align: center;
     }
 
     .home-content h1 {
         font-size: 5rem;
+        text-align: center;
+    }
+
+    .home-content p {
+        text-align: center;
+    }
+
+    .social-media {
+        text-align: center;
     }
 
     .home-img img {
@@ -496,8 +510,20 @@ portfolio-box:hover img{
         margin-bottom: 3rem;
     }
 
+    .portfolio .heading {
+        text-align: center;
+    }
+
     .portfolio-container {
         grid-template-columns: 1fr;
+    }
+
+    .contact .btn {
+        margin-bottom: 5rem;
+    }
+
+    .contact .heading {
+        text-align: center;
     }
 }
 
