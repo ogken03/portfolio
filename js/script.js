@@ -51,7 +51,7 @@ ScrollReveal().reveal('.home-content, .heading', {origin:'top'});
 
 const typed = new Typed('.multiple-text', {
 
-    strings: ['Arizona State University Student in Computer Science'],
+    strings: ['Arizona State University Student in (Cybersecurity) Computer Science'],
     
    
 });
